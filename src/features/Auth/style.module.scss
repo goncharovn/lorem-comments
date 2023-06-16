@@ -1,0 +1,33 @@
+.auth__header {
+	margin-bottom: 34px;
+
+	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
+
+	color: #434343;
+}
+
+.auth__checkbox {
+	align-self: flex-start;
+
+	margin-bottom: 40px;
+}
+
+.auth__button {
+	align-self: center;
+}
+
+.auth__login {
+	margin-bottom: 25px;
+}
+
+.auth__password {
+	margin-bottom: 20px;
+}
+
+.auth__cross {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}

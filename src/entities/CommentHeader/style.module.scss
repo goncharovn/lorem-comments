@@ -1,0 +1,27 @@
+.commentHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-shrink: 0;
+
+	box-sizing: border-box;
+	height: 50px;
+
+	line-height: 1.2;
+}
+
+.commentHeader__email {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.commentHeader__score {
+	display: flex;
+	align-items: flex-start;
+
+	font-size: 24px;
+}
+
+.commentHeader__scoreValue {
+	margin-right: 4px;
+}

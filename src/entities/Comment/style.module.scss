@@ -1,0 +1,34 @@
+.comment {
+	display: flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+
+	width: 100%;
+	height: 100%;
+
+	padding: 0 16px 24px 16px;
+
+	border-radius: 6px;
+
+	background-color: rgba(67, 67, 67, 0.8);
+}
+
+.comment__header {
+	margin-bottom: 10px;
+}
+
+.comment__text {
+	display: -webkit-box;
+	-webkit-line-clamp: 11;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	font-size: 18px;
+}
+
+.comment__button {
+	align-self: flex-start;
+	margin-top: auto;
+}

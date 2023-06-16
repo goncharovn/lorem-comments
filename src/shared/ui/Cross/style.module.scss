@@ -1,0 +1,31 @@
+.cross {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.cross::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #2b2f3c;
+	transform-origin: center;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #2b2f3c;
+	transform-origin: center;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
