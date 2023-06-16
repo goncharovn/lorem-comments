@@ -13,11 +13,16 @@
 .commentHeader__email {
 	font-size: 18px;
 	text-transform: uppercase;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: pre-wrap;
 }
 
 .commentHeader__score {
 	display: flex;
 	align-items: flex-start;
+
+	margin-left: 10px;
 
 	font-size: 24px;
 }

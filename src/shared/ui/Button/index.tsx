@@ -6,13 +6,15 @@ interface IButtonProps {
 	text: string
 	size: string
 	color: string
+	onClick?: (arg: any) => any
 }
 
 export default function Button({
 	className,
 	text,
 	size,
-	color
+	color,
+	onClick
 }: IButtonProps) {
 	return (
 		<button
@@ -24,6 +26,7 @@ export default function Button({
 					className
 				)
 			}
+			onClick={onClick}
 		>
 			{text}
 		</button>
