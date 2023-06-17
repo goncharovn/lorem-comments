@@ -4,18 +4,17 @@ import Button from 'shared/ui/Button'
 import { useState } from 'react'
 
 export default function CardsContainer() {
-	const [visibleCount, setVisibleCount] = useState(3)
+	const [page, setPage] = useState(1)
 
-	const showMoreCards = () => {
-		setVisibleCount(prevCount => prevCount + 3)
-		console.log(visibleCount)
+	const loadMore = () => {
+		setPage((prevPage) => ++prevPage);
 	}
 
 	return (
 		<div className={styles.cardsContainer}>
 			<Cards
 				className={styles.cardsContainer__cards}
-				visibleCount={visibleCount}
+				page={page}
 			/>
 
 			<Button
@@ -23,7 +22,7 @@ export default function CardsContainer() {
 				text='More'
 				size='m'
 				color='purple'
-				onClick={showMoreCards}
+				onClick={loadMore}
 			/>
 		</div>
 	)

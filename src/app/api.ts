@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import Comment from 'shared/interfaces/comment'
-import Photo from 'shared/interfaces/photo'
+import IComment from 'shared/interfaces/comment'
+import IPhoto from 'shared/interfaces/photo'
 
 export const api = createApi({
 	reducerPath: 'JSONPlaceholderApi',
@@ -8,15 +8,11 @@ export const api = createApi({
 		baseUrl: 'https://jsonplaceholder.typicode.com/'
 	}),
 	endpoints: builder => ({
-		getComments: builder.query<Comment[], void>({
-			query: () => ({
-				url: `/comments`,
-			})
+		getComments: builder.query<IComment[], number>({
+			query: (page = 1) => `comments?_page=${page}&_limit=3`,
 		}),
-		getPhotos: builder.query<Photo[], void>({
-			query: () => ({
-				url: `/photos`,
-			})
+		getPhotos: builder.query<IPhoto[], number>({
+			query: (page = 1) => `photos?_page=${page}&_limit=3`,
 		}),
 	})
 })

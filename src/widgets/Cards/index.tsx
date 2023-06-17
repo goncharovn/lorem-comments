@@ -2,29 +2,48 @@ import Card from 'entities/Card'
 import styles from './style.module.scss'
 import cn from 'classnames'
 import { useGetCommentsQuery, useGetPhotosQuery } from 'app/api'
-import Comment from 'shared/interfaces/comment'
+import { useEffect, useState } from 'react'
+import IComment from 'shared/interfaces/comment'
+import IPhoto from 'shared/interfaces/photo'
 
 interface CardsProps {
 	className?: string
-	visibleCount: number
+	page: number
 }
 
 export default function Cards({
 	className,
-	visibleCount
+	page
 }: CardsProps) {
+	const [commentsData, setCommentsData] = useState<IComment[]>([])
+	const [photosData, setPhotosData] = useState<IPhoto[]>([])
 
-	const {
-		data: comments,
-	} = useGetCommentsQuery()
+	const { data: comments, isFetching: isCommentsFetching } = useGetCommentsQuery(page)
+	const { data: photos, isFetching: isPhotosFetching } = useGetPhotosQuery(page)
 
-	useGetPhotosQuery()
+	useEffect(() => {
+		if (comments) {
+			setCommentsData(commentsData => [...commentsData, ...comments])
+		}
+	}, [comments])
+
+	useEffect(() => {
+		if (photos) {
+			setPhotosData(photosData => [...photosData, ...photos])
+		}
+	}, [photos])
 
 	return (
 		<div className={cn(styles.cards, className)}>
-			{comments?.slice(0, visibleCount)?.map((comment: Comment) => (
-				<Card key={comment.id} id={comment.id} />
+			{commentsData.map((comment, index) => (
+				<Card
+					key={comment.id}
+					comment={comment}
+					photo={photosData[index]}
+				/>
 			))}
+
+			{(isCommentsFetching || isPhotosFetching) && <div style={{ color: 'white' }}>Preloader</div>}
 		</div>
 	)
 }

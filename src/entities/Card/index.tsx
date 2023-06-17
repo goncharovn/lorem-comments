@@ -1,20 +1,17 @@
-import { api } from 'app/api'
 import styles from './style.module.scss'
 import Comment from 'entities/Comment'
+import IComment from 'shared/interfaces/comment'
+import IPhoto from 'shared/interfaces/photo'
 
 interface CardProps {
-	id: number
+	comment: IComment
+	photo: IPhoto
 }
 
 export default function Card({
-	id
+	comment,
+	photo
 }: CardProps) {
-	const { photo } = api.useGetPhotosQuery(undefined, {
-		selectFromResult: ({ data }) => ({
-			photo: data?.find((photo) => photo.id === id),
-		}),
-	})
-
 	return (
 		<article className={styles.card}>
 			<img
@@ -25,7 +22,7 @@ export default function Card({
 
 			<Comment
 				className={styles.card__comment}
-				id={id}
+				comment={comment}
 			/>
 		</article>
 	)

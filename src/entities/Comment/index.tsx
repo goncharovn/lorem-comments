@@ -2,23 +2,17 @@ import CommentHeader from 'entities/CommentHeader'
 import styles from './style.module.scss'
 import Button from 'shared/ui/Button'
 import cn from 'classnames'
-import { api } from 'app/api'
+import IComment from 'shared/interfaces/comment'
 
 interface CommentProps {
 	className?: string
-	id: number
+	comment: IComment
 }
 
 export default function Comment({
 	className,
-	id
+	comment
 }: CommentProps) {
-	const { comment } = api.useGetCommentsQuery(undefined, {
-		selectFromResult: ({ data }) => ({
-			comment: data?.find((comment) => comment.id === id),
-		}),
-	})
-
 	return (
 		<div className={cn(styles.comment, className)}>
 			<CommentHeader
