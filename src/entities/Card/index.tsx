@@ -2,13 +2,14 @@ import styles from './style.module.scss'
 import Comment from 'entities/Comment'
 import IComment from 'shared/interfaces/comment'
 import IPhoto from 'shared/interfaces/photo'
+import React from 'react'
 
 interface CardProps {
 	comment: IComment
 	photo: IPhoto
 }
 
-export default function Card({
+export default React.memo(function Card({
 	comment,
 	photo
 }: CardProps) {
@@ -16,8 +17,8 @@ export default function Card({
 		<article className={styles.card}>
 			<img
 				className={styles.card__img}
-				src={photo?.url}
-				alt={photo?.title}
+				src={photo.url}
+				alt={photo.title}
 			/>
 
 			<Comment
@@ -26,4 +27,4 @@ export default function Card({
 			/>
 		</article>
 	)
-}
+})

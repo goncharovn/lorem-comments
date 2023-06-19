@@ -17,7 +17,7 @@ export default function Comment({
 		<div className={cn(styles.comment, className)}>
 			<CommentHeader
 				className={styles.comment__header}
-				email={comment?.email}
+				email={comment.email}
 			/>
 
 			<p className={styles.comment__text}>{comment?.body}</p>

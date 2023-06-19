@@ -1,15 +1,11 @@
 import { useMemo } from 'react';
 import styles from './style.module.scss'
 import cn from 'classnames'
+import randomInteger from 'shared/helpers/randomInteger'
 
 interface CommentHeaderProps {
 	className?: string
-	email?: string
-}
-
-function randomInteger(min: number, max: number) {
-	let rand = min + Math.random() * (max + 1 - min);
-	return Math.floor(rand);
+	email: string
 }
 
 export default function CommentHeader({
@@ -24,7 +20,7 @@ export default function CommentHeader({
 
 			<div className={styles.commentHeader__score}>
 				<span className={styles.commentHeader__scoreValue}>{scoreValue}</span>
-				<img src="/public/images/star.svg" alt="" />
+				<img src="/images/star.svg" alt="" />
 			</div>
 		</div>
 	)

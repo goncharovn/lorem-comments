@@ -11,13 +11,13 @@ export default function Auth() {
 			<h2 className={styles.auth__header}>Authorization</h2>
 
 			<Input
-				className={styles.auth__password}
-				placeholder='Password'
+				className={styles.auth__login}
+				placeholder='Login'
 			/>
 
 			<Input
-				className={styles.auth__login}
-				placeholder='Login'
+				className={styles.auth__password}
+				placeholder='Password'
 			/>
 
 			<Checkbox

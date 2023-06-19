@@ -7,7 +7,7 @@ export default function CardsContainer() {
 	const [page, setPage] = useState(1)
 
 	const loadMore = () => {
-		setPage((prevPage) => ++prevPage);
+		setPage((prevPage) => ++prevPage)
 	}
 
 	return (
