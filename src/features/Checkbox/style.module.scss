@@ -1,11 +1,18 @@
 .checkbox {
+	position: relative;
 	display: flex;
 	align-items: center;
+
+	border-radius: 2px;
 
 	font-size: 12px;
 	font-weight: 500;
 
 	cursor: pointer;
+
+	background: #ffffff;
+
+	transition: box-shadow linear .2s;
 }
 
 .checkbox::before {
@@ -25,10 +32,17 @@
 	margin-right: 5px;
 }
 
-.hiddenInput {
-	display: none;
+.checkbox:has(.hiddenInput:focus-visible) {
+	box-shadow:
+		0 0 0 2px #ffffff,
+		0 0 0 4px #7469F3;
 }
 
-.hiddenInput:checked+.checkbox::before {
+.hiddenInput {
+	position: absolute;
+	z-index: -1;
+}
+
+.checkbox:has(.hiddenInput:checked)::before {
 	background-color: #7469F3;
 }

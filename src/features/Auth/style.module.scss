@@ -1,3 +1,8 @@
+.auth {
+	display: flex;
+	flex-direction: column;
+}
+
 .auth__header {
 	margin-bottom: 34px;
 
@@ -24,10 +29,4 @@
 
 .auth__password {
 	margin-bottom: 20px;
-}
-
-.auth__cross {
-	position: absolute;
-	top: 20px;
-	right: 20px;
 }

@@ -3,12 +3,17 @@ import cn from 'classnames'
 
 interface CrossProps {
 	className?: string
+	onClick: () => void
 }
 
 export default function Cross({
-	className
+	className,
+	onClick
 }: CrossProps) {
 	return (
-		<div className={cn(styles.cross, className)}></div>
+		<button
+			className={cn(styles.cross, className)}
+			onClick={onClick}
+		></button>
 	)
 }

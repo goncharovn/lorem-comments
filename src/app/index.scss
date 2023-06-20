@@ -17,6 +17,12 @@ button {
 	cursor: pointer;
 
 	font-family: inherit;
+
+	border: none;
+	background: none;
+
+	outline: 0;
+	outline-color: transparent;
 }
 
 p {
@@ -29,4 +35,13 @@ h2 {
 
 input {
 	font-family: inherit;
+}
+
+label {
+	outline: 0;
+	outline-color: transparent;
+}
+
+.page--modal--active {
+	overflow: hidden;
 }

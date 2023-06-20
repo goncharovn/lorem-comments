@@ -12,16 +12,13 @@ export default function Checkbox({
 }: CheckboxProps) {
 	return (
 		<>
-			<input
-				className={styles.hiddenInput}
-				type='checkbox'
-				id='remember'
-			/>
-
 			<label
 				className={cn(styles.checkbox, className)}
-				htmlFor='remember'
 			>
+				<input
+					className={styles.hiddenInput}
+					type='checkbox'
+				/>
 				{text}
 			</label>
 		</>

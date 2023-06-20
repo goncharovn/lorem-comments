@@ -14,7 +14,10 @@ export default React.memo(function Card({
 	photo
 }: CardProps) {
 	return (
-		<article className={styles.card}>
+		<article
+			className={styles.card}
+			tabIndex={0}
+		>
 			<img
 				className={styles.card__img}
 				src={photo.url}

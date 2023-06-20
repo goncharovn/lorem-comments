@@ -1,4 +1,5 @@
 .card {
+	position: relative;
 	height: 380px;
 
 	overflow: hidden;
@@ -7,8 +8,17 @@
 
 	border-radius: 6px;
 
-	background-color: #ffffff;
+	background-color: var(--bg-default);
 	color: #ffffff;
+
+	outline-color: transparent;
+
+	transition: outline linear .2s;
+}
+
+.card:focus-visible {
+	outline: 2px solid #7469f3;
+	outline-offset: 2px;
 }
 
 .card__img {
@@ -26,6 +36,10 @@
 	transform: translateY(330px);
 
 	transition: transform linear 0.2s;
+}
+
+.card:focus-within>.card__comment {
+	transform: translateY(0);
 }
 
 .card:hover>.card__comment {
