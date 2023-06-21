@@ -19,7 +19,7 @@ export default function CommentHeader({
 
 			<div className={styles.CommentHeader__score}>
 				<span className={styles.CommentHeader__scoreValue}>{scoreValue}</span>
-				<img src="/images/star.svg" alt="" />
+				<img src="images/star.svg" alt="" />
 			</div>
 		</div>
 	)
