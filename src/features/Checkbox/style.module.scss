@@ -1,4 +1,4 @@
-.checkbox {
+.Checkbox {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -15,7 +15,7 @@
 	transition: box-shadow linear .2s;
 }
 
-.checkbox::before {
+.Checkbox::before {
 	content: "";
 
 	display: inline-block;
@@ -32,17 +32,18 @@
 	margin-right: 5px;
 }
 
-.checkbox:has(.hiddenInput:focus-visible) {
-	box-shadow:
-		0 0 0 2px #ffffff,
-		0 0 0 4px #7469F3;
-}
-
 .hiddenInput {
 	position: absolute;
 	z-index: -1;
 }
 
-.checkbox:has(.hiddenInput:checked)::before {
+.Checkbox:has(.hiddenInput:focus-visible) {
+	box-shadow:
+		0 0 0 2px #ffffff,
+		0 0 0 4px #7469F3;
+}
+
+
+.Checkbox:has(.hiddenInput:checked)::before {
 	background-color: #7469F3;
 }

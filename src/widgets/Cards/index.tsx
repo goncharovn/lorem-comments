@@ -62,7 +62,7 @@ export default function Cards({
 	}, [page])
 
 	return (
-		<div className={cn(styles.cards, className)}>
+		<div className={cn(styles.Cards, className)}>
 			{data.map((value) => (
 				<Card
 					key={value.comment.id}

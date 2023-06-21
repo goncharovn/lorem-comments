@@ -1,4 +1,4 @@
-.card {
+.Card {
 	position: relative;
 	height: 380px;
 
@@ -16,12 +16,12 @@
 	transition: outline linear .2s;
 }
 
-.card:focus-visible {
+.Card:focus-visible {
 	outline: 2px solid #7469f3;
 	outline-offset: 2px;
 }
 
-.card__img {
+.Card__img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -32,16 +32,16 @@
 	object-fit: cover;
 }
 
-.card__comment {
+.Card__comment {
 	transform: translateY(330px);
 
 	transition: transform linear 0.2s;
 }
 
-.card:focus-within>.card__comment {
+.Card:focus-within>.Card__comment {
 	transform: translateY(0);
 }
 
-.card:hover>.card__comment {
+.Card:hover>.Card__comment {
 	transform: translateY(0);
 }

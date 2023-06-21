@@ -20,9 +20,9 @@ export default function Button({
 		<button
 			className={
 				cn(
-					styles.button,
-					{ [styles[`button--size--${size}`]]: size },
-					{ [styles[`button--${color}`]]: color },
+					styles.Button,
+					{ [styles[`Button--size--${size}`]]: size },
+					{ [styles[`Button--color--${color}`]]: color },
 					className
 				)
 			}

@@ -14,16 +14,16 @@ export default function Comment({
 	comment
 }: CommentProps) {
 	return (
-		<div className={cn(styles.comment, className)}>
+		<div className={cn(styles.Comment, className)}>
 			<CommentHeader
-				className={styles.comment__header}
+				className={styles.Comment__header}
 				email={comment.email}
 			/>
 
-			<p className={styles.comment__text}>{comment?.body}</p>
+			<p className={styles.Comment__text}>{comment.body}</p>
 
 			<Button
-				className={styles.comment__button}
+				className={styles.Comment__button}
 				text='Visit Comment'
 				size='m'
 				color='purple'

@@ -27,20 +27,20 @@ export default function Modal({
 	return (
 		<FocusTrap>
 			<div
-				className={styles.modal}
+				className={styles.Modal}
 				onClick={closeModal}
 				onKeyDown={handleKeyDown}
 				tabIndex={0}
 			>
-				<div className={styles.modal__dialog}>
+				<div className={styles.Modal__dialog}>
 					<div
-						className={styles.modal__content}
+						className={styles.Modal__content}
 						onClick={(e) => e.stopPropagation()}
 					>
 						{children}
 
 						<Cross
-							className={styles.modal__cross}
+							className={styles.Modal__cross}
 							onClick={closeModal}
 						/>
 					</div>

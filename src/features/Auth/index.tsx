@@ -15,27 +15,27 @@ export default function Auth() {
 			isActive={isAuthModalActive}
 			closeModal={() => dispatch(closeModal())}
 		>
-			<form className={styles.auth}>
-				<h2 className={styles.auth__header}>Authorization</h2>
+			<form className={styles.Auth}>
+				<h2 className={styles.Auth__header}>Authorization</h2>
 
 				<Input
-					className={styles.auth__login}
+					className={styles.Auth__login}
 					placeholder='Login'
 					autoFocus={true}
 				/>
 
 				<Input
-					className={styles.auth__password}
+					className={styles.Auth__password}
 					placeholder='Password'
 				/>
 
 				<Checkbox
-					className={styles.auth__checkbox}
+					className={styles.Auth__checkbox}
 					text='Remember me on next login'
 				/>
 
 				<Button
-					className={styles.auth__button}
+					className={styles.Auth__button}
 					text='Sign In'
 					size='s'
 					color='purple'

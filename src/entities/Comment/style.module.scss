@@ -1,9 +1,8 @@
-.comment {
+.Comment {
 	display: flex;
 	flex-direction: column;
 
 	box-sizing: border-box;
-
 	width: 100%;
 	height: 100%;
 
@@ -14,11 +13,11 @@
 	background-color: rgba(67, 67, 67, 0.8);
 }
 
-.comment__header {
+.Comment__header {
 	margin-bottom: 10px;
 }
 
-.comment__text {
+.Comment__text {
 	display: -webkit-box;
 	-webkit-line-clamp: 11;
 	-webkit-box-orient: vertical;
@@ -28,7 +27,7 @@
 	font-size: 18px;
 }
 
-.comment__button {
+.Comment__button {
 	align-self: flex-start;
 	margin-top: auto;
 }

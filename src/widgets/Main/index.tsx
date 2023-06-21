@@ -11,10 +11,10 @@ export default function Main() {
 	return (
 		<FocusTrap>
 			<main
-				className={styles.main}
+				className={styles.Main}
 			>
 				<Button
-					className={styles.main__button}
+					className={styles.Main__button}
 					text='Sign In'
 					size='m'
 					color='purple'

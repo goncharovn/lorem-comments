@@ -1,9 +1,9 @@
-.auth {
+.Auth {
 	display: flex;
 	flex-direction: column;
 }
 
-.auth__header {
+.Auth__header {
 	margin-bottom: 34px;
 
 	text-align: center;
@@ -13,20 +13,20 @@
 	color: #434343;
 }
 
-.auth__checkbox {
+.Auth__checkbox {
 	align-self: flex-start;
 
 	margin-bottom: 40px;
 }
 
-.auth__button {
+.Auth__button {
 	align-self: center;
 }
 
-.auth__login {
+.Auth__login {
 	margin-bottom: 25px;
 }
 
-.auth__password {
+.Auth__password {
 	margin-bottom: 20px;
 }

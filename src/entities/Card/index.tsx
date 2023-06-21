@@ -15,17 +15,17 @@ export default React.memo(function Card({
 }: CardProps) {
 	return (
 		<article
-			className={styles.card}
+			className={styles.Card}
 			tabIndex={0}
 		>
 			<img
-				className={styles.card__img}
+				className={styles.Card__img}
 				src={photo.url}
 				alt={photo.title}
 			/>
 
 			<Comment
-				className={styles.card__comment}
+				className={styles.Card__comment}
 				comment={comment}
 			/>
 		</article>

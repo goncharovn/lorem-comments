@@ -1,4 +1,4 @@
-.modal {
+.Modal {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -11,7 +11,7 @@
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.modal__dialog {
+.Modal__dialog {
 	display: flex;
 	align-items: center;
 
@@ -20,7 +20,7 @@
 	margin: 50px auto;
 }
 
-.modal__content {
+.Modal__content {
 	position: relative;
 
 	width: 100%;
@@ -32,7 +32,7 @@
 	background-color: #ffffff;
 }
 
-.modal__cross {
+.Modal__cross {
 	position: absolute;
 	top: 20px;
 	right: 20px;

@@ -1,4 +1,4 @@
-.cardsContainer {
+.CardsContainer {
 	display: flex;
 	flex-direction: column;
 
@@ -11,10 +11,10 @@
 	background-color: var(--bg-secondary);
 }
 
-.cardsContainer__cards {
+.CardsContainer__cards {
 	margin-bottom: 50px;
 }
 
-.cardsContainer__button {
+.CardsContainer__button {
 	align-self: center;
 }

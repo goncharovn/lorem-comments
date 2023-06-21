@@ -11,14 +11,14 @@ export default function CardsContainer() {
 	}
 
 	return (
-		<div className={styles.cardsContainer}>
+		<div className={styles.CardsContainer}>
 			<Cards
-				className={styles.cardsContainer__cards}
+				className={styles.CardsContainer__cards}
 				page={page}
 			/>
 
 			<Button
-				className={styles.cardsContainer__button}
+				className={styles.CardsContainer__button}
 				text='More'
 				size='m'
 				color='purple'

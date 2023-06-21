@@ -12,7 +12,7 @@ export default function Cross({
 }: CrossProps) {
 	return (
 		<button
-			className={cn(styles.cross, className)}
+			className={cn(styles.Cross, className)}
 			onClick={onClick}
 		></button>
 	)

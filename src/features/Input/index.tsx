@@ -13,13 +13,13 @@ export default function Input({
 	autoFocus
 }: InputProps) {
 	return (
-		<div className={cn(styles.input, className)}>
+		<div className={cn(styles.Input, className)}>
 			<input
-				className={cn(styles.input__field)}
+				className={cn(styles.Input__field)}
 				type='text'
 				autoFocus={autoFocus}
 			/>
-			<span className={styles.input__placeholder}>
+			<span className={styles.Input__placeholder}>
 				{placeholder}
 			</span>
 		</div>

@@ -1,11 +1,11 @@
-.input {
+.Input {
 	position: relative;
 
 	box-sizing: border-box;
 	height: 50px;
 }
 
-.input__field {
+.Input__field {
 	position: relative;
 	outline: 0;
 
@@ -25,7 +25,11 @@
 	background-color: transparent;
 }
 
-.input__placeholder {
+.Input__field:focus {
+	padding-top: 10px;
+}
+
+.Input__placeholder {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -39,11 +43,7 @@
 	transition: font-size .2s, color .2s, top 0.2s, transform .2s;
 }
 
-.input__field:focus {
-	padding-top: 10px;
-}
-
-.input__field:focus+.input__placeholder {
+.Input__field:focus+.Input__placeholder {
 	top: 5px;
 	transform: none;
 

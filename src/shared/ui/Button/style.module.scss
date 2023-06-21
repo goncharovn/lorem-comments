@@ -1,4 +1,4 @@
-.button {
+.Button {
 	border: 0;
 	border-radius: 6px;
 
@@ -12,30 +12,30 @@
 	transition: background-color linear .15s, outline-color linear .15s;
 }
 
-.button--size--m {
+.Button--size--m {
 	min-width: 218px;
 	min-height: 47px;
 }
 
-.button--size--s {
+.Button--size--s {
 	min-width: 166px;
 	min-height: 40px;
 }
 
-.button--purple {
+.Button--color--purple {
 	background-color: #7469f3;
 }
 
-.button--purple:focus-visible {
+.Button--color--purple:focus-visible {
 	outline: 2px solid #7469f3;
 	outline-offset: 2px;
 }
 
-.button--purple:hover {
+.Button--color--purple:hover {
 	background-color: #4b41b8;
 	outline-color: #4b41b8;
 }
 
-.button--purple:active {
+.Button--color--purple:active {
 	background-color: #342d7e;
 }

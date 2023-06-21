@@ -11,11 +11,11 @@ const authModalSlice = createSlice({
 	reducers: {
 		openModal: (state, action: PayloadAction<undefined>) => {
 			state.isActive = true
-			document.body.classList.add('page--modal--active')
+			document.body.classList.add('Page--modal--active')
 		},
 		closeModal: (state, action: PayloadAction<undefined>) => {
 			state.isActive = false
-			document.body.classList.remove('page--modal--active')
+			document.body.classList.remove('Page--modal--active')
 		}
 	}
 })

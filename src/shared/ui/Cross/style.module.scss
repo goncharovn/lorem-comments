@@ -1,4 +1,4 @@
-.cross {
+.Cross {
 	width: 25px;
 	height: 25px;
 	cursor: pointer;
@@ -12,16 +12,16 @@
 	transition: background-color linear .2s, box-shadow linear .2s;
 }
 
-.cross:hover {
+.Cross:hover {
 	background-color: #e5e5e5;
 }
 
-.cross:focus-visible {
+.Cross:focus-visible {
 	box-shadow:
 		0 0 0 2px #7469F3;
 }
 
-.cross::before {
+.Cross::before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -34,7 +34,7 @@
 	transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.cross::after {
+.Cross::after {
 	content: "";
 	position: absolute;
 	top: 50%;

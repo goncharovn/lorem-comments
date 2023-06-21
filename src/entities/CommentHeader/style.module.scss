@@ -1,4 +1,4 @@
-.commentHeader {
+.CommentHeader {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -10,7 +10,7 @@
 	line-height: 1.2;
 }
 
-.commentHeader__email {
+.CommentHeader__email {
 	font-size: 18px;
 	text-transform: uppercase;
 	text-overflow: ellipsis;
@@ -18,7 +18,7 @@
 	white-space: pre-wrap;
 }
 
-.commentHeader__score {
+.CommentHeader__score {
 	display: flex;
 	align-items: flex-start;
 
@@ -27,6 +27,6 @@
 	font-size: 24px;
 }
 
-.commentHeader__scoreValue {
+.CommentHeader__scoreValue {
 	margin-right: 4px;
 }

@@ -13,7 +13,7 @@ export default function Checkbox({
 	return (
 		<>
 			<label
-				className={cn(styles.checkbox, className)}
+				className={cn(styles.Checkbox, className)}
 			>
 				<input
 					className={styles.hiddenInput}
