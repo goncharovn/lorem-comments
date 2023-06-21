@@ -2,6 +2,8 @@ import Cross from 'shared/ui/Cross'
 import styles from './style.module.scss'
 import { KeyboardEvent } from 'react'
 import FocusTrap from 'focus-trap-react'
+import cn from 'classnames'
+import { useMount } from 'app/hooks'
 
 interface ModalProps {
 	isActive: boolean
@@ -14,7 +16,9 @@ export default function Modal({
 	isActive,
 	closeModal
 }: ModalProps) {
-	if (!isActive) {
+	const { mounted } = useMount({ isActive })
+
+	if (!mounted) {
 		return null
 	}
 
@@ -27,7 +31,7 @@ export default function Modal({
 	return (
 		<FocusTrap>
 			<div
-				className={styles.Modal}
+				className={cn(styles.Modal, { [styles['Modal--active']]: isActive })}
 				onClick={closeModal}
 				onKeyDown={handleKeyDown}
 				tabIndex={0}

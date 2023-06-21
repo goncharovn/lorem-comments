@@ -1,3 +1,23 @@
+$animation-duration: .3s;
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: translateY(-200px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
 .Modal {
 	position: fixed;
 	top: 0;
@@ -9,6 +29,15 @@
 	overflow-y: auto;
 
 	background: rgba(255, 255, 255, 0.5);
+
+	opacity: 0;
+
+	transition: opacity ease-in-out $animation-duration;
+	animation: fade ease-in-out $animation-duration;
+}
+
+.Modal--active {
+	opacity: 1;
 }
 
 .Modal__dialog {
@@ -18,6 +47,15 @@
 	min-height: calc(100% - (50px * 2));
 	max-width: 460px;
 	margin: 50px auto;
+
+	transform: translateY(-100px);
+
+	transition: transform ease-in-out $animation-duration;
+	animation: slide ease-in-out $animation-duration;
+}
+
+.Modal--active>.Modal__dialog {
+	transform: translateY(0);
 }
 
 .Modal__content {
