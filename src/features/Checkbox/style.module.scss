@@ -43,12 +43,11 @@
 	z-index: -1;
 }
 
-.Checkbox:has(.hiddenInput:focus-visible) {
-	box-shadow:
-		0 0 0 2px #ffffff,
-		0 0 0 4px #7469F3;
+.hiddenInput:focus-visible+.Checkbox {
+	outline: 2px solid #7469f3;
+	outline-offset: 2px;
 }
 
-.Checkbox:has(.hiddenInput:checked)::before {
-	background-color: #7469F3;
+.hiddenInput:checked+.Checkbox::before {
+	background-color: #7469f3;
 }

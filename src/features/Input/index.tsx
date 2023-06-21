@@ -10,6 +10,7 @@ interface InputProps {
 	required?: boolean
 	onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 	value: string
+	name: string
 }
 
 export default function Input({
@@ -20,6 +21,7 @@ export default function Input({
 	required,
 	onChange,
 	value,
+	name
 }: InputProps) {
 	return (
 		<div className={cn(styles.Input, className)}>
@@ -30,6 +32,7 @@ export default function Input({
 				onChange={onChange}
 				required={required}
 				value={value}
+				name={name}
 			/>
 			<span className={styles.Input__placeholder}>
 				{placeholder}

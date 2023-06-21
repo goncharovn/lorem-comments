@@ -38,6 +38,7 @@ export default function Auth() {
 				required={true}
 				onChange={(e) => setLogin(e.target.value)}
 				value={login}
+				name='login'
 			/>
 
 			<Input
@@ -47,6 +48,7 @@ export default function Auth() {
 				required={true}
 				onChange={(e) => setPassword(e.target.value)}
 				value={password}
+				name='password'
 			/>
 
 			<Checkbox
@@ -54,6 +56,7 @@ export default function Auth() {
 				text='Remember me on next login'
 				onChange={(e) => setIsRemembered(e.target.checked)}
 				checked={isRemembered}
+				name='remembered'
 			/>
 
 			<Button
