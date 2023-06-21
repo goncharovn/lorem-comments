@@ -9,7 +9,7 @@ export default function Main() {
 	const dispatch = useAppDispatch()
 
 	return (
-		<FocusTrap>
+		<FocusTrap focusTrapOptions={{ initialFocus: false }} >
 			<main
 				className={styles.Main}
 			>

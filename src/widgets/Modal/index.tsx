@@ -30,7 +30,7 @@ export default function Modal({
 	}
 
 	return (
-		<FocusTrap>
+		<FocusTrap >
 			<div
 				className={cn(styles.Modal, { [styles['Modal--active']]: isActive })}
 				onClick={closeModal}
