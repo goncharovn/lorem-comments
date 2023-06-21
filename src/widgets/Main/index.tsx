@@ -2,7 +2,7 @@ import CardsContainer from 'widgets/CardsContainer'
 import styles from './style.module.scss'
 import Button from 'shared/ui/Button'
 import { useAppDispatch } from 'app/hooks'
-import { openModal } from 'features/Auth/authModalSlice'
+import { openModal } from 'widgets/AuthModal/authModalSlice'
 import FocusTrap from 'focus-trap-react'
 
 export default function Main() {

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
-import authModalReducer from 'features/Auth/authModalSlice'
+import authModalReducer from 'widgets/AuthModal/authModalSlice'
 
 const rootReducer = combineReducers({
 	authModal: authModalReducer

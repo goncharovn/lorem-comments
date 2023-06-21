@@ -25,7 +25,8 @@
 	background-color: transparent;
 }
 
-.Input__field:focus {
+.Input__field:focus,
+.Input__field--isFilled {
 	padding-top: 10px;
 }
 
@@ -43,7 +44,8 @@
 	transition: font-size .2s, color .2s, top 0.2s, transform .2s;
 }
 
-.Input__field:focus+.Input__placeholder {
+.Input__field:focus+.Input__placeholder,
+.Input__field--isFilled+.Input__placeholder {
 	top: 5px;
 	transform: none;
 

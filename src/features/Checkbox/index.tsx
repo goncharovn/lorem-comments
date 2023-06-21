@@ -1,14 +1,19 @@
+import { ChangeEvent } from 'react'
 import styles from './style.module.scss'
 import cn from 'classnames'
 
 interface CheckboxProps {
 	className?: string
-	text: string
+	text: string,
+	onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+	checked: boolean
 }
 
 export default function Checkbox({
 	className,
-	text
+	text,
+	onChange,
+	checked
 }: CheckboxProps) {
 	return (
 		<>
@@ -18,6 +23,8 @@ export default function Checkbox({
 				<input
 					className={styles.hiddenInput}
 					type='checkbox'
+					onChange={onChange}
+					checked={checked}
 				/>
 				{text}
 			</label>
