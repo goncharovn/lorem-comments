@@ -5,6 +5,7 @@ import { useAppDispatch } from 'app/hooks'
 import Input from 'features/Input'
 import Checkbox from 'features/Checkbox'
 import Button from 'shared/ui/Button'
+import { signIn } from './authSlice'
 
 export default function Auth() {
 	const dispatch = useAppDispatch()
@@ -18,8 +19,11 @@ export default function Auth() {
 
 		if (isRemembered) {
 			localStorage.setItem('login', login)
+		} else {
+			localStorage.removeItem('login')
 		}
 
+		dispatch(signIn())
 		dispatch(closeModal())
 	}
 
