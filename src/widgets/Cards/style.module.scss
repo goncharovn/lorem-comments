@@ -1,0 +1,11 @@
+.Cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	gap: min(85px, 6vw);
+
+	box-sizing: border-box;
+
+	width: 100%;
+
+	border-radius: 6px;
+}

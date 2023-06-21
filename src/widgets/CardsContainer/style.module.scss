@@ -1,0 +1,20 @@
+.CardsContainer {
+	display: flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 534px;
+
+	padding: 28px min(25px, 1.7vw);
+
+	background-color: var(--bg-secondary);
+}
+
+.CardsContainer__cards {
+	margin-bottom: 50px;
+}
+
+.CardsContainer__button {
+	align-self: center;
+}

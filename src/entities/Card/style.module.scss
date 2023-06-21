@@ -1,0 +1,47 @@
+.Card {
+	position: relative;
+	height: 380px;
+
+	overflow: hidden;
+
+	position: relative;
+
+	border-radius: 6px;
+
+	background-color: var(--bg-default);
+	color: #ffffff;
+
+	outline-color: transparent;
+
+	transition: outline linear .2s;
+}
+
+.Card:focus-visible {
+	outline: 2px solid #7469f3;
+	outline-offset: 2px;
+}
+
+.Card__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+.Card__comment {
+	transform: translateY(330px);
+
+	transition: transform linear 0.2s;
+}
+
+.Card:focus-within>.Card__comment {
+	transform: translateY(0);
+}
+
+.Card:hover>.Card__comment {
+	transform: translateY(0);
+}

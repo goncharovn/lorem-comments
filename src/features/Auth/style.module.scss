@@ -1,0 +1,32 @@
+.Auth {
+	display: flex;
+	flex-direction: column;
+}
+
+.Auth__header {
+	margin-bottom: 34px;
+
+	text-align: center;
+	font-size: 36px;
+	font-weight: 500;
+
+	color: #434343;
+}
+
+.Auth__checkbox {
+	align-self: flex-start;
+
+	margin-bottom: 40px;
+}
+
+.Auth__button {
+	align-self: center;
+}
+
+.Auth__login {
+	margin-bottom: 25px;
+}
+
+.Auth__password {
+	margin-bottom: 20px;
+}

@@ -1,0 +1,93 @@
+$animation-duration: .3s;
+$dialog-margin: 10px;
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slide {
+	from {
+		transform: translateY(-200px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.Modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	background: rgba(255, 255, 255, 0.5);
+
+	opacity: 0;
+
+	transition: opacity ease-in-out $animation-duration;
+	animation: fade ease-in-out $animation-duration;
+}
+
+.Modal--active {
+	opacity: 1;
+}
+
+.Modal__dialog {
+	display: flex;
+	align-items: center;
+
+	box-sizing: border-box;
+
+	min-height: calc(100% - ($dialog-margin * 2));
+	max-width: 460px;
+
+	padding: 5px;
+
+	margin: $dialog-margin auto;
+
+	transform: translateY(-100px);
+
+	transition: transform ease-in-out $animation-duration;
+	animation: slide ease-in-out $animation-duration;
+}
+
+.Modal--active>.Modal__dialog {
+	transform: translateY(0);
+}
+
+.Modal__content {
+	position: relative;
+
+	width: 100%;
+
+	border-radius: 6px;
+
+	padding: 35px 40px 13px 40px;
+
+	background-color: #ffffff;
+
+	@media (max-width: 460px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.Modal__cross {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	@media (max-width: 380px) {
+		top: 15px;
+		right: 15px;
+	}
+}

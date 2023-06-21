@@ -1,0 +1,44 @@
+.Button {
+	border: 0;
+	border-radius: 6px;
+
+	padding: 0 10px;
+
+	font-size: 18px;
+	font-weight: 500;
+
+	color: #ffffff;
+
+	transition: background-color linear .15s, outline-color linear .15s;
+}
+
+.Button--size--m {
+	min-width: 218px;
+	min-height: 47px;
+}
+
+.Button--size--s {
+	min-width: 166px;
+	min-height: 40px;
+}
+
+.Button--color--purple {
+	background-color: #7469f3;
+
+	&:focus-visible {
+		outline: 2px solid #7469f3;
+		outline-offset: 2px;
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: #4b41b8;
+			outline-color: #4b41b8;
+		}
+	}
+
+	&:active {
+		background-color: #342d7e;
+		outline-color: #342d7e;
+	}
+}

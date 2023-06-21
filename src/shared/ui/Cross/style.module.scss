@@ -1,0 +1,54 @@
+.Cross {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	box-shadow: none;
+	border-radius: 50%;
+
+	padding: 0;
+
+	background: #ffffff;
+
+	transition: background-color linear .2s, box-shadow linear .2s;
+
+	&:focus-visible {
+		box-shadow:
+			0 0 0 2px #7469F3;
+	}
+
+	@media(hover: hover) {
+		&:hover {
+			background-color: #cbcaca;
+		}
+	}
+
+	&:active {
+		background-color: #e5e5e5;
+	}
+}
+
+.Cross::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #2b2f3c;
+	transform-origin: center;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.Cross::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #2b2f3c;
+	transform-origin: center;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
