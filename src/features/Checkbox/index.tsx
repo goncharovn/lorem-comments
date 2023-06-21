@@ -7,25 +7,34 @@ interface CheckboxProps {
 	text: string,
 	onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 	checked: boolean
+	name: string
 }
 
 export default function Checkbox({
 	className,
 	text,
 	onChange,
-	checked
+	checked,
+	name
 }: CheckboxProps) {
 	return (
 		<>
+			<input
+				className={styles.hiddenInput}
+				type='checkbox'
+				onChange={onChange}
+				checked={checked}
+				id='hiddenInput'
+				name={name}
+			/>
+
 			<label
-				className={cn(styles.Checkbox, className)}
+				className={cn(
+					styles.Checkbox,
+					className
+				)}
+				htmlFor='hiddenInput'
 			>
-				<input
-					className={styles.hiddenInput}
-					type='checkbox'
-					onChange={onChange}
-					checked={checked}
-				/>
 				{text}
 			</label>
 		</>

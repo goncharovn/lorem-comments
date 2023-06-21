@@ -1,25 +1,43 @@
 import CardsContainer from 'widgets/CardsContainer'
 import styles from './style.module.scss'
 import Button from 'shared/ui/Button'
-import { useAppDispatch } from 'app/hooks'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { openModal } from 'widgets/AuthModal/authModalSlice'
 import FocusTrap from 'focus-trap-react'
+import { selectIsSignedIn, signOut } from 'features/Auth/authSlice'
 
 export default function Main() {
 	const dispatch = useAppDispatch()
+
+	const isSignedIn = useAppSelector(selectIsSignedIn)
+
+	let button
+	if (!isSignedIn) {
+		button =
+			<Button
+				className={styles.Main__button}
+				text='Sign In'
+				size='m'
+				color='purple'
+				onClick={() => dispatch(openModal())}
+			/>
+	} else {
+		button =
+			<Button
+				className={styles.Main__button}
+				text='Sign Out'
+				size='m'
+				color='purple'
+				onClick={() => dispatch(signOut())}
+			/>
+	}
 
 	return (
 		<FocusTrap focusTrapOptions={{ initialFocus: false }} >
 			<main
 				className={styles.Main}
 			>
-				<Button
-					className={styles.Main__button}
-					text='Sign In'
-					size='m'
-					color='purple'
-					onClick={() => dispatch(openModal())}
-				/>
+				{button}
 				<CardsContainer />
 			</main>
 		</FocusTrap>

@@ -5,6 +5,7 @@ import { useAppDispatch } from 'app/hooks'
 import Input from 'features/Input'
 import Checkbox from 'features/Checkbox'
 import Button from 'shared/ui/Button'
+import { signIn } from './authSlice'
 
 export default function Auth() {
 	const dispatch = useAppDispatch()
@@ -18,8 +19,11 @@ export default function Auth() {
 
 		if (isRemembered) {
 			localStorage.setItem('login', login)
+		} else {
+			localStorage.removeItem('login')
 		}
 
+		dispatch(signIn())
 		dispatch(closeModal())
 	}
 
@@ -38,6 +42,7 @@ export default function Auth() {
 				required={true}
 				onChange={(e) => setLogin(e.target.value)}
 				value={login}
+				name='login'
 			/>
 
 			<Input
@@ -47,6 +52,7 @@ export default function Auth() {
 				required={true}
 				onChange={(e) => setPassword(e.target.value)}
 				value={password}
+				name='password'
 			/>
 
 			<Checkbox
@@ -54,6 +60,7 @@ export default function Auth() {
 				text='Remember me on next login'
 				onChange={(e) => setIsRemembered(e.target.checked)}
 				checked={isRemembered}
+				name='remembered'
 			/>
 
 			<Button
