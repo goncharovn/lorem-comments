@@ -4,6 +4,7 @@ import { KeyboardEvent } from 'react'
 import FocusTrap from 'focus-trap-react'
 import cn from 'classnames'
 import { useMount } from 'app/hooks'
+import { MODAL_ANIMATION_DURATION } from 'shared/constants'
 
 interface ModalProps {
 	isActive: boolean
@@ -16,7 +17,7 @@ export default function Modal({
 	isActive,
 	closeModal
 }: ModalProps) {
-	const { mounted } = useMount({ isActive })
+	const { mounted } = useMount({ isActive, duration: MODAL_ANIMATION_DURATION })
 
 	if (!mounted) {
 		return null

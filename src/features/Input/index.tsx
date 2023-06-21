@@ -35,6 +35,5 @@ export default function Input({
 				{placeholder}
 			</span>
 		</div>
-
 	)
 }

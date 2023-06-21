@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 export const useAppDispatch: () => AppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
-export const useMount = ({ isActive }: { isActive: boolean }) => {
+export const useMount = ({ isActive, duration }: { isActive: boolean, duration: number }) => {
 	const [mounted, setMounted] = useState(false)
 	useEffect(() => {
 		if (isActive && !mounted) {
@@ -13,7 +13,7 @@ export const useMount = ({ isActive }: { isActive: boolean }) => {
 		} else if (!isActive && mounted) {
 			setTimeout(() => {
 				setMounted(false)
-			}, 300);
+			}, duration);
 		}
 	}, [isActive])
 

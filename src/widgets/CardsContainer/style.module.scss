@@ -6,7 +6,7 @@
 	width: 100%;
 	min-height: 534px;
 
-	padding: 28px 25px;
+	padding: 28px min(25px, 1.7vw);
 
 	background-color: var(--bg-secondary);
 }

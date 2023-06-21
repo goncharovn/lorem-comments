@@ -7,11 +7,15 @@
 
 	margin: 0 auto;
 
-	padding: 30px 10px;
+	padding: 30px min(10px, 1vw);
 }
 
 .Main__button {
 	align-self: flex-end;
 
 	margin-bottom: 34px;
+
+	@media (max-width: 735px) {
+		align-self: center;
+	}
 }
