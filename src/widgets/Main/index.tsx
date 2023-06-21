@@ -4,12 +4,17 @@ import Button from 'shared/ui/Button'
 import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { openModal } from 'widgets/AuthModal/authModalSlice'
 import FocusTrap from 'focus-trap-react'
-import { selectIsSignedIn, signOut } from 'features/Auth/authSlice'
+import { selectIsSignedIn, signIn, signOut } from 'features/Auth/authSlice'
 
 export default function Main() {
 	const dispatch = useAppDispatch()
 
 	const isSignedIn = useAppSelector(selectIsSignedIn)
+	const isStorageSignedIn = JSON.parse(localStorage.getItem('isSignedIn') ?? 'false')
+
+	if (isSignedIn === false && isStorageSignedIn === true) {
+		dispatch(signIn())
+	}
 
 	let button
 	if (!isSignedIn) {

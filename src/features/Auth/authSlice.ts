@@ -11,9 +11,11 @@ const authSlice = createSlice({
 	reducers: {
 		signIn: (state, _action: PayloadAction<undefined>) => {
 			state.isSignedIn = true
+			localStorage.setItem('isSignedIn', 'true')
 		},
 		signOut: (state, _action: PayloadAction<undefined>) => {
 			state.isSignedIn = false
+			localStorage.setItem('isSignedIn', 'false')
 		}
 	}
 })
