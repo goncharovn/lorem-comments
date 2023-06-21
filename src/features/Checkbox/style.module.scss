@@ -11,6 +11,12 @@
 	cursor: pointer;
 
 	background: #ffffff;
+
+	@media (hover: hover) {
+		&:hover::before {
+			background-color: #cbcaca;
+		}
+	}
 }
 
 .Checkbox::before {
@@ -32,10 +38,6 @@
 	transition: box-shadow linear .2s, background-color linear .2s
 }
 
-.Checkbox:hover::before {
-	background-color: #cbcaca;
-}
-
 .hiddenInput {
 	position: absolute;
 	z-index: -1;
@@ -46,7 +48,6 @@
 		0 0 0 2px #ffffff,
 		0 0 0 4px #7469F3;
 }
-
 
 .Checkbox:has(.hiddenInput:checked)::before {
 	background-color: #7469F3;
