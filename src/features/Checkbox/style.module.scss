@@ -11,8 +11,6 @@
 	cursor: pointer;
 
 	background: #ffffff;
-
-	transition: box-shadow linear .2s;
 }
 
 .Checkbox::before {
@@ -30,6 +28,12 @@
 	border-radius: 3px;
 
 	margin-right: 5px;
+
+	transition: box-shadow linear .2s, background-color linear .2s
+}
+
+.Checkbox:hover::before {
+	background-color: #cbcaca;
 }
 
 .hiddenInput {

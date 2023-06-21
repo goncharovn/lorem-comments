@@ -10,15 +10,21 @@
 	background: #ffffff;
 
 	transition: background-color linear .2s, box-shadow linear .2s;
-}
 
-.Cross:hover {
-	background-color: #e5e5e5;
-}
+	&:focus-visible {
+		box-shadow:
+			0 0 0 2px #7469F3;
+	}
 
-.Cross:focus-visible {
-	box-shadow:
-		0 0 0 2px #7469F3;
+	@media(hover: hover) {
+		&:hover {
+			background-color: #cbcaca;
+		}
+	}
+
+	&:active {
+		background-color: #e5e5e5;
+	}
 }
 
 .Cross::before {

@@ -24,18 +24,21 @@
 
 .Button--color--purple {
 	background-color: #7469f3;
-}
 
-.Button--color--purple:focus-visible {
-	outline: 2px solid #7469f3;
-	outline-offset: 2px;
-}
+	&:focus-visible {
+		outline: 2px solid #7469f3;
+		outline-offset: 2px;
+	}
 
-.Button--color--purple:hover {
-	background-color: #4b41b8;
-	outline-color: #4b41b8;
-}
+	@media (hover: hover) {
+		&:hover {
+			background-color: #4b41b8;
+			outline-color: #4b41b8;
+		}
+	}
 
-.Button--color--purple:active {
-	background-color: #342d7e;
+	&:active {
+		background-color: #342d7e;
+		outline-color: #342d7e;
+	}
 }
